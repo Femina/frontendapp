@@ -6,7 +6,7 @@ import { IbanComponent } from './iban/iban.component';
 
 const routes: Routes = [
 {path: '', redirectTo: '/home', pathMatch: 'full'},
-{path: 'home', component: HomeComponent },
+{path: 'home', component: IbanComponent },
 {path: 'iban', component: IbanComponent }
 ];
 
