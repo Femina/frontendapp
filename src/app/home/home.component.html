@@ -1,0 +1,42 @@
+<div class="iban-component">
+	<div class="form-content">
+	  <form [formGroup]="reactiveForm" autocomplete="off" novalidate>
+		<h1>BANKAJAR </h1>
+		<p class="balance-label">Balance:<span class="dynamic-balance">100,000.00</span></p>
+		<p class="has-dynamic-label">
+		  <input class="form-control" id="ibanReactive" type="text" name="ibanReactive" formControlName="ibanReactive" placeholder="Enter IBAN" required>
+		  <label for="dynamic-label-input">IBAN</label>
+		</p>
+		<div *ngIf="ibanReactive.invalid && (ibanReactive.dirty || ibanReactive.touched)"
+         class="alert alert-danger">
+ 
+		  <div *ngIf="ibanReactive.errors.required">
+			IBAN is required.
+		  </div>
+		  <div *ngIf="ibanReactive.errors.iban">
+			IBAN is invalid
+		  </div>
+ 
+		</div>
+		<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)"
+			 class="alert alert-info">
+		  {{ibanReactive.value | ibanFormatter}}: IBAN is valid.
+		</div>
+		<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)">
+			<p class="has-dynamic-label">
+			  <input  type="text" id="dynamic-label-input"  placeholder="Enter Amount" required>
+			  <label for="dynamic-label-input">AMOUNT</label>
+			  
+			</p>
+			<label class="balance-chart-label">  Real time Balance Tracker: </label>
+			<div class="pie">
+					<div class="pie_segment" style="--offset: 0; --value: 25; --bg: #db0a5b;"></div>
+					<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)" class="pie_segment" style="--offset: 25; --value: 10; --bg: #22a7f0;"></div>
+			</div>
+			<div>
+				<input type="submit" value="Transfer" class="btn btn-primary"/>
+			</div>
+		</div>
+	  </form>
+	</div>
+</div>

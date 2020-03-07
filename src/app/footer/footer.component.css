@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    height: 50px;
+    background-color: grey;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+.footer p
+{
+	font-size: 14px;
+	color: dark-grey;
+	font-family: "Roboto";
+	text-align: center;
+	padding: 10px;
+}
