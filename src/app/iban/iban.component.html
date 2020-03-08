@@ -22,6 +22,7 @@
 			 class="alert alert-info">
 		  {{ibanReactive.value | ibanFormatter}}: IBAN is valid.
 		  
+		  <span><img class="flag" src="assets/flags/{{ibanReactive.value.substring(0,2) | lowercase}}.svg"/></span>
 		</div>
 		<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)">
 			<p class="has-dynamic-label">

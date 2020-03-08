@@ -20,6 +20,8 @@ export class IbanComponent implements OnInit,OnDestroy  {
  
   public ibanReactive: FormControl;
   
+  country="AE";
+  
   public amount: FormControl;
   
   bankObj = {};
@@ -57,6 +59,11 @@ export class IbanComponent implements OnInit,OnDestroy  {
 			Validators.min(1000)
 	]);
 	
+	if(this.ibanReactive.valid)
+	{
+		this.country = (this.ibanReactive.value).substring(0,2);
+		console.log(this.country)
+	}
 	
     this.reactiveForm = this.fb.group({
       ibanReactive: this.ibanReactive,

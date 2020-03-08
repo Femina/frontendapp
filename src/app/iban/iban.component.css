@@ -157,3 +157,9 @@ input:invalid + .text-info {
 .pie_segment:after{
 	opacity: var(--over50,0)
 }
+.flag
+{
+	color:darkpurple;
+	width:20px;
+	height:20px;
+}
