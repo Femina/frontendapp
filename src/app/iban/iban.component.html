@@ -27,7 +27,7 @@
 		<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)">
 			<p class="has-dynamic-label">
 			  <input  type="text" id="amount"  placeholder="Enter Amount" formControlName="amount" required>
-			  <label for="dynamic-label-input">AMOUNT</label>
+			  <label for="dynamic-label-input">AMOUNT(AED)</label>
 			</p>
 			<div *ngIf="amount.invalid && (amount.dirty || amount.touched)"
          class="alert alert-danger">
