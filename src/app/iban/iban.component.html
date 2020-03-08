@@ -46,8 +46,9 @@
 		</div>
 			<label class="balance-chart-label">  Real time Balance Tracker: </label>
 			<div class="pie">
-					<div class="pie_segment" style="--offset: 0; --value: 25; --bg: #db0a5b;"></div>
-					<div *ngIf="ibanReactive.valid && (ibanReactive.dirty || ibanReactive.touched)" class="pie_segment" style="--offset: 25; --value: 10; --bg: #22a7f0;"></div>
+					<div *ngIf="amount.invalid" class="pie_segment" style="--offset: 0; --value: 0; --bg: #db0a5b;"></div>
+					<div *ngIf="amount.valid && (amount.value <= 50000)" class="pie_segment" style="--offset: 25; --value: 10; --bg: #22a7f0;"></div>
+					<div *ngIf="amount.valid && (amount.value >= 50000)" class="pie_segment" style="--offset: 65; --value: 40; --bg: #22a7f0;"></div>
 			</div>
 			<div>
 				<input type="submit" value="Transfer" class="btn btn-primary"/>
