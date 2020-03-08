@@ -77,7 +77,7 @@ export class IbanComponent implements OnInit,OnDestroy  {
   
   getTotalBalance()
   {
-	this.dataService.getAccountBalance().pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>)=>{
+	this.dataService.getAccountBalance().pipe(takeUntil(this.destroy$)).subscribe((res: any)=>{
 		console.log(res);
 		this.totalBalance = res;
     }) 

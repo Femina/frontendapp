@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { IbanComponent } from './iban/iban.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,8 +19,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     IbanComponent,
     HeaderComponent,
-    FooterComponent,
-    HomeComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
