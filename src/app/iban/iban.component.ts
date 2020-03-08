@@ -7,6 +7,7 @@ import {  takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { CommonModule, CurrencyPipe} from '@angular/common';
 
+
 @Component({
   selector: 'app-iban',
   templateUrl: './iban.component.html',
@@ -90,8 +91,10 @@ export class IbanComponent implements OnInit,OnDestroy  {
             return;
         }
 		this.currentBalance = this.totalBalance - this.amount.value;
-        alert('Transferred:'+this.amount.value+' Current Outstanding Balance is:'+this.currentBalance);
+        alert('Successfully Transferred:'+this.amount.value+' Your Current Outstanding Balance is:'+this.currentBalance);
 		this.totalBalance = this.currentBalance;
+		
+		this.reactiveForm.reset();
     }
   
   public ngOnDestroy():void {

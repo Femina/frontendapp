@@ -27,10 +27,6 @@ export class DataService {
     return throwError(errorMessage);
   }
 
-  public sendGetRequest(){
-    return this.httpClient.get(this.REST_API_SERVER).pipe(catchError(this.handleError));
-  }
-  
   public getBankDetails(iban){
     return this.httpClient.get(this.REST_API_SERVER+"/bank/"+iban).pipe(catchError(this.handleError));
   }

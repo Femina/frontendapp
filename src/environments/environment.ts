@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  balance:100000
 };
 
 /*
